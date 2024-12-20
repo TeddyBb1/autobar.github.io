@@ -1,0 +1,282 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #EEEEEE; /* Fundal */
+    font-family: 'DM Sans', sans-serif;
+    color: #000000;
+}
+
+/* Header Styling */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: #FFFFFF;
+    border-bottom: 0.7px solid #141619;
+    padding: 0 300px; /* Spațiere laterală */
+}
+
+/* Stânga: Logo */
+.header-left .logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #050A44;
+}
+
+/* Mijloc: Navigație */
+.header-center .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* Spațiu între butoane */
+}
+
+.header-center .nav-links li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.header-center .nav-links li a:hover {
+    color: #050A44;
+}
+
+/* Dreapta: Iconițe și buton Login */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.header-right .icon {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Buton Login */
+.login-button {
+    background-color: #050A44; /* Albastru închis */
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none; /* Elimină sublinierea specifică link-urilor */
+    display: inline-block; /* Asigură comportamentul de buton */
+    transition: all 0.3s ease; /* Efect de tranziție */
+}
+
+/* Hover pentru buton Login */
+.login-button:hover {
+    background-color: #3B4F9F; /* Albastru mai deschis */
+    transform: scale(1.1); /* Butonul devine puțin mai mare */
+}
+
+/* Container pentru imagine */
+.promo-container {
+    width: 100%;
+}
+
+.promo-image {
+    width: 100%;
+    display: block;
+}
+
+/* Meniul de search */
+.white-rectangle {
+    background-color: #FFFFFF; /* Fundal alb */
+    height: 240px; /* Înălțimea dreptunghiului */
+    margin: -100px 300px 0 300px; /* Ridic dreptunghiul cu 100px și păstrez spațierea laterală */
+    position: relative; /* Asigur poziționare corectă */
+    z-index: 10; /* Îl aduc deasupra imaginii */
+    border-radius: 8px; /* Colțuri rotunjite */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Umbra subtire */
+}
+
+/* Istoric */
+.second-rectangle {
+    margin-top: 25px; /* Adaug distanța de 50px față de primul dreptunghi */
+    z-index: 5; /* Opțional: pentru controlul stratificării */
+}
+
+/* Masini Populare */
+.third-rectangle {
+    margin-top: 25px; /* Adaug distanța de 50px față de primul dreptunghi */
+    z-index: 5; /* Opțional: pentru controlul stratificării */
+}
+
+/* Categorii Populare */
+.forth-rectangle {
+    margin-top: 25px; /* Adaug distanța de 50px față de primul dreptunghi */
+    z-index: 5; /* Opțional: pentru controlul stratificării */
+}
+
+/* Fifth Rectangle - Informații */
+.fifth-rectangle {
+    background-color: #FFFFFF; /* Fundal alb */
+    height: auto; /* Înălțime automată în funcție de conținut */
+    margin: 25px 300px; /* Spațiere de 300px lateral și 25px de sus */
+    border-radius: 8px; /* Colțuri rotunjite */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Umbra subtire */
+    padding: 30px; /* Spațiere internă */
+}
+
+.fifth-rectangle h2, 
+.fifth-rectangle h3, 
+.fifth-rectangle h4 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #050A44;
+}
+
+.fifth-rectangle p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #333333;
+}
+
+/* Layout pentru text și imagine */
+.info-content {
+    display: flex;
+    justify-content: space-between; /* Text în stânga, imagine în dreapta */
+    align-items: center; /* Aliniere verticală */
+    gap: 30px; /* Spațiu între text și imagine */
+    margin-bottom: 20px;
+}
+
+/* Stilizare pentru text */
+.info-text {
+    flex: 1; /* Ocupă spațiul rămas */
+}
+
+/* Stilizare pentru imagine */
+.info-image img {
+    max-width: 300px; /* Dimensiune maximă imagine */
+    height: auto; /* Păstrează proporțiile */
+    border-radius: 8px; /* Colțuri rotunjite pentru imagine */
+    display: block;
+}
+
+/* Info Grid pentru secțiunea de jos */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Două coloane */
+    gap: 20px; /* Spațiere între elemente */
+}
+
+.closing {
+    text-align: center;
+    font-weight: 700;
+    margin-top: 30px;
+    color: #050A44;
+}
+
+/* Footer Styling */
+.site-footer {
+    background-color: #141619; /* Culoare fundal */
+    color: #FFFFFF; /* Culoare text */
+    padding: 30px 0; /* Spațiere internă verticală */
+    margin-top: 100px; /* Distanță față de ultimul dreptunghi */
+    text-align: center; /* Aliniere text central */
+    font-size: 14px;
+}
+
+.footer-content p {
+    margin: 0; /* Eliminăm marginile implicite */
+    font-weight: 500;
+    height: 240px;
+}
+
+/* Footer Styling */
+.site-footer {
+    background-color: #141619; /* Fundal */
+    color: #B3B4BD; /* Text alb */
+    padding: 50px 0; /* Spațiere internă verticală */
+    margin-top: 100px; /* Distanță față de secțiunea anterioară */
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 300px; /* Spațiere laterală */
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px; /* Spațiu între logouri */
+    margin-bottom: 30px;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%); /* Transformă logo-urile în alb */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1); /* Mărește logo-ul la hover */
+}
+
+.footer-sections {
+    display: flex;
+    justify-content: space-between; /* Distanță egală între coloane */
+    gap: 30px; /* Spațiu între coloane */
+    width: 100%; /* Lățime completă */
+}
+
+.footer-column {
+    flex: 1; /* Toate coloanele au dimensiuni egale */
+    max-width: 200px; /* Dimensiune maximă pentru o coloană */
+    text-align: left; /* Aliniere text la stânga */
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.footer-column select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333333;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
