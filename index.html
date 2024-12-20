@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinde Mașina Ta AICI</title>
+    <link rel="icon" type="image/png" href="pictures/favicon.ico">
     <!-- Google Font: DM Sans -->
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -13,13 +14,13 @@
     <header class="site-header">
         <!-- Stânga: Logo-ul -->
         <div class="header-left">
-            <span class="logo">autobar.ro</span>
+            <a href="index.html" class="logo">autobar.ro</a>
         </div>
 
         <!-- Mijloc: Butoanele -->
         <nav class="header-center">
             <ul class="nav-links">
-                <li><a href="#">Search</a></li>
+                <li><a href="search.html">Search</a></li>
                 <li><a href="#">Sell</a></li>
                 <li><a href="#">Inform</a></li>
             </ul>
@@ -29,7 +30,7 @@
         <div class="header-right">
             <img src="pictures/save.png" alt="Save" class="icon">
             <img src="pictures/notification.png" alt="Notification" class="icon">
-            <button class="login-button">Login</button>
+            <a href="login.html" class="login-button">Login</a>
         </div>
     </header>
     
@@ -92,9 +93,67 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="footer-content">
-            <p>&copy; 2024 autobar.ro. Toate drepturile rezervate.</p>
+        <div class="footer-container">
+            <!-- Secțiunea Social Media -->
+            <div class="footer-social">
+                <a href="#"><img src="pictures/facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="pictures/twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="pictures/youtube-icon.png" alt="YouTube"></a>
+                <a href="#"><img src="pictures/instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="pictures/linkedin-icon.png" alt="LinkedIn"></a>
+            </div>
+
+            <!-- Secțiuni Footer -->
+            <div class="footer-sections">
+                <!-- Limba și Aplicația -->
+                <div class="footer-column">
+                    <h4>Language</h4>
+                    <select>
+                        <option>English</option>
+                        <option>Română</option>
+                    </select>
+                    <h4>Appearance</h4>
+                    <select>
+                        <option>Light Mode</option>
+                        <option>Dark Mode</option>
+                    </select>
+                </div>
+
+                <!-- Company Info -->
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">Despre noi</a></li>
+                        <li><a href="#">Știri</a></li>
+                        <li><a href="#">Cariere</a></li>
+                        <li><a href="#">Publicitate</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Informații legale -->
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Termeni și condiții</a></li>
+                        <li><a href="#">Politica de confidențialitate</a></li>
+                        <li><a href="#">Setări confidențialitate</a></li>
+                    </ul>
+                </div>
+
+                <!-- Dealer -->
+                <div class="footer-column">
+                    <h4>Dealer</h4>
+                    <ul>
+                        <li><a href="#">Autentificare</a></li>
+                        <li><a href="#">Înregistrare</a></li>
+                        <li><a href="#">Ofertele noastre</a></li>
+                        <li><a href="#">Prețuri</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
+
 </body>
 </html>

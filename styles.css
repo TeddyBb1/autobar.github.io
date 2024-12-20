@@ -71,6 +71,8 @@ body {
     font-weight: 500;
     border-radius: 4px;
     cursor: pointer;
+    text-decoration: none; /* Elimină sublinierea specifică link-urilor */
+    display: inline-block; /* Asigură comportamentul de buton */
     transition: all 0.3s ease; /* Efect de tranziție */
 }
 
@@ -194,3 +196,87 @@ body {
     font-weight: 500;
     height: 240px;
 }
+
+/* Footer Styling */
+.site-footer {
+    background-color: #141619; /* Fundal */
+    color: #B3B4BD; /* Text alb */
+    padding: 50px 0; /* Spațiere internă verticală */
+    margin-top: 100px; /* Distanță față de secțiunea anterioară */
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 300px; /* Spațiere laterală */
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px; /* Spațiu între logouri */
+    margin-bottom: 30px;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%); /* Transformă logo-urile în alb */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1); /* Mărește logo-ul la hover */
+}
+
+.footer-sections {
+    display: flex;
+    justify-content: space-between; /* Distanță egală între coloane */
+    gap: 30px; /* Spațiu între coloane */
+    width: 100%; /* Lățime completă */
+}
+
+.footer-column {
+    flex: 1; /* Toate coloanele au dimensiuni egale */
+    max-width: 200px; /* Dimensiune maximă pentru o coloană */
+    text-align: left; /* Aliniere text la stânga */
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.footer-column select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333333;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+

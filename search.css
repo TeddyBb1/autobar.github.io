@@ -1,0 +1,154 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #EEEEEE; /* Fundal */
+    font-family: 'DM Sans', sans-serif;
+    color: #000000;
+}
+
+/* Header Styling */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: #FFFFFF;
+    border-bottom: 0.7px solid #141619;
+    padding: 0 300px; /* Spațiere laterală */
+}
+
+/* Stânga: Logo */
+.header-left .logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #050A44;
+}
+
+/* Mijloc: Navigație */
+.header-center .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* Spațiu între butoane */
+}
+
+.header-center .nav-links li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.header-center .nav-links li a:hover {
+    color: #050A44;
+}
+
+/* Dreapta: Iconițe și buton Login */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.header-right .icon {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Buton Login */
+.login-button {
+    background-color: #050A44; /* Albastru închis */
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none; /* Elimină sublinierea specifică link-urilor */
+    display: inline-block; /* Asigură comportamentul de buton */
+    transition: all 0.3s ease; /* Efect de tranziție */
+}
+
+/* Hover pentru buton Login */
+.login-button:hover {
+    background-color: #3B4F9F; /* Albastru mai deschis */
+    transform: scale(1.1); /* Butonul devine puțin mai mare */
+}
+
+/* Footer Styling */
+.search-footer {
+    background-color: #141619; /* Fundal footer */
+    color: #FFFFFF; /* Text alb */
+    padding: 20px 0; /* Spațiere verticală */
+    margin-top: 50px; /* Distanță față de secțiunea anterioară */
+}
+
+/* Linie subțire deasupra secțiunii de opțiuni */
+.footer-line {
+    border-top: 1px solid #333333; /* Linie subțire deasupra */
+    margin: 0 300px 20px 300px; /* Distanță de 300px față de marginile laterale */
+}
+
+/* Link-uri Footer - Aliniere complet la stânga */
+.footer-links {
+    display: flex;
+    justify-content: flex-start; /* Asigură alinierea la stânga */
+    align-items: center; /* Aliniază vertical link-urile */
+    gap: 30px; /* Spațiu constant între link-uri */
+    margin-left: 300px; /* Spațiu față de marginea din stânga */
+    margin-bottom: 20px; /* Spațiu față de linia subțire */
+    flex-wrap: nowrap; /* Menține toate link-urile pe o singură linie */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 14px;
+    white-space: nowrap; /* Previne împărțirea link-urilor */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Linie sub link la hover */
+}
+
+/* Container general pentru footer */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spațiu între secțiuni */
+    padding: 0; /* Elimină padding-ul lateral */
+}
+
+/* Secțiunea Opțiuni: Limba și Apariție */
+.footer-options {
+    display: flex;
+    justify-content: flex-start; /* Aliniere la stânga */
+    gap: 50px; /* Spațiu între secțiuni */
+    margin-left: 300px; /* Spațiu consistent față de marginea din stânga */
+}
+
+/* Titlu pentru fiecare opțiune */
+.option h4 {
+    font-size: 14px;
+    margin-bottom: 5px; /* Spațiere între titlu și select */
+    font-weight: 700;
+}
+
+/* Selecturile pentru Limba și Apariție */
+.option select {
+    width: 150px;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333333; /* Fundal întunecat pentru select */
+    color: #FFFFFF; /* Text alb */
+    font-size: 14px;
+}
+
