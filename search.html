@@ -20,8 +20,8 @@
         <!-- Mijloc: Butoanele -->
         <nav class="header-center">
             <ul class="nav-links">
-                <li><a href="#">Search</a></li>
-                <li><a href="#">Sell</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="sell.html">Sell</a></li>
                 <li><a href="#">Inform</a></li>
             </ul>
         </nav>
@@ -34,15 +34,66 @@
         </div>
     </header>
 
-    <!-- Conținut Principal -->
     <main>
-        <h1>Pagina de Căutare</h1>
-        <p>Aici poți căuta mașinile dorite.</p>
+        <!-- Anunțurile vor fi adăugate aici -->
     </main>
+
+    <!-- Script pentru afișarea anunțurilor -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Preluarea anunțurilor din localStorage
+            const ads = JSON.parse(localStorage.getItem('ads')) || [];
+
+            // Iterarea prin lista de anunțuri și afișarea fiecărui anunț
+            ads.forEach((adData, index) => {
+                // Crearea unui element pentru anunț
+                const adElement = document.createElement('div');
+                adElement.classList.add('ad');
+                adElement.innerHTML = `
+                    <h2>${adData.listingTitle}</h2>
+                    <p><strong>Categorie:</strong> ${adData.category}</p>
+                    <p><strong>Etichetă:</strong> ${adData.label}</p>
+                    <p><strong>Stare:</strong> ${adData.condition}</p>
+                    <p><strong>Tip:</strong> ${adData.type}</p>
+                    <p><strong>Marcă:</strong> ${adData.make}</p>
+                    <p><strong>Model:</strong> ${adData.model}</p>
+                    <p><strong>An:</strong> ${adData.year}</p>
+                    <p><strong>Tip ofertă:</strong> ${adData.offerType}</p>
+                    <p><strong>Kilometraj:</strong> ${adData.mileage}</p>
+                    <p><strong>Transmisie:</strong> ${adData.transmission}</p>
+                    <p><strong>Tip combustibil:</strong> ${adData.fuelType}</p>
+                    <p><strong>Capacitate motor:</strong> ${adData.engineSize}</p>
+                    <p><strong>Număr uși:</strong> ${adData.door}</p>
+                    <p><strong>VIN:</strong> ${adData.vin}</p>
+                    <button class="delete-button" data-index="${index}">
+                        <img src="pictures/trash.png" alt="Delete" class="icon">
+                    </button>
+                `;
+
+                // Adăugarea anunțului în pagina de căutare
+                document.querySelector('main').appendChild(adElement);
+            });
+        });
+    </script>
+
+    <!-- Script pentru ștergerea anunțurilor -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Adăugarea evenimentului de click pentru butoanele de ștergere
+            document.querySelectorAll('.delete-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = this.getAttribute('data-index');
+                    let ads = JSON.parse(localStorage.getItem('ads')) || [];
+                    ads.splice(index, 1); // Șterge anunțul din array
+                    localStorage.setItem('ads', JSON.stringify(ads)); // Actualizează localStorage
+                    this.parentElement.remove(); // Șterge anunțul din DOM
+                });
+            });
+        });
+    </script>
 
     <!-- Footer -->
     <footer class="search-footer">
-        
         <!-- Secțiuni Footer -->
         <div class="footer-container">
             <!-- Link-uri -->
@@ -53,27 +104,6 @@
                 <a href="#">Privacy Policy</a>
                 <a href="#">Privacy Settings</a>
                 <a href="#">Contact</a>
-            </div>
-
-            <!-- Linie subțire -->
-            <div class="footer-line"></div>
-
-            <!-- Opțiuni Limba și Apariție -->
-            <div class="footer-options">
-                <div class="option">
-                    <h4>Language</h4>
-                    <select>
-                        <option>English</option>
-                        <option>Română</option>
-                    </select>
-                </div>
-                <div class="option">
-                    <h4>Appearance</h4>
-                    <select>
-                        <option>Light Mode</option>
-                        <option>Dark Mode</option>
-                    </select>
-                </div>
             </div>
         </div>
     </footer>

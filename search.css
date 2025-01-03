@@ -28,6 +28,8 @@ body {
     font-size: 20px;
     font-weight: 700;
     color: #050A44;
+    text-decoration: none; /* Elimină sublinierea specifică link-urilor */
+    display: inline-block; /* Asigură comportamentul de buton */
 }
 
 /* Mijloc: Navigație */
@@ -150,5 +152,36 @@ body {
     background-color: #333333; /* Fundal întunecat pentru select */
     color: #FFFFFF; /* Text alb */
     font-size: 14px;
+}
+
+.ad {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 300px; /* Distanță de 300px de marginile site-ului */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* Pentru a poziționa butonul de ștergere */
+}
+
+.ad h2 {
+    margin-bottom: 10px;
+}
+
+.ad p {
+    margin: 5px 0;
+}
+
+.delete-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-button .icon {
+    width: 24px;
+    height: 24px;
 }
 

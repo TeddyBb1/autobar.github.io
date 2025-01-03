@@ -1,0 +1,100 @@
+Searchul intra 120 peste poza, 300 din ambele parti distantieer
+
+<div class="form-container">
+        <form>
+            <h1>Detalii Mașină</h1>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="listing-title">Titlu Anunț</label>
+                    <input type="text" id="listing-title" placeholder="Introduceți titlul">
+                </div>
+                <div class="form-group">
+                    <label for="category">Categorie</label>
+                    <select id="category">
+                        <option>Mașini</option>
+                        <option>Camionete</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="label">Etichetă</label>
+                    <select id="label">
+                        <option>Alege eticheta</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="condition">Stare</label>
+                    <select id="condition">
+                        <option>Nou</option>
+                        <option>Utilizat</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="type">Tip</label>
+                    <select id="type">
+                        <option>Berline</option>
+                        <option>SUV</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="make">Marcă</label>
+                    <select id="make">
+                        <option>Alege marca</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="model">Model</label>
+                    <select id="model">
+                        <option>Alege modelul</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="year">An</label>
+                    <select id="year">
+                        <option>Alege anul</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="offer-type">Tip ofertă</label>
+                    <select id="offer-type">
+                        <option>Vânzare</option>
+                        <option>Închiriere</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mileage">Kilometraj</label>
+                    <input type="text" id="mileage" placeholder="Ex: 75,000 km">
+                </div>
+                <div class="form-group">
+                    <label for="transmission">Transmisie</label>
+                    <select id="transmission">
+                        <option>Manual</option>
+                        <option>Automat</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fuel-type">Tip combustibil</label>
+                    <select id="fuel-type">
+                        <option>Benzină</option>
+                        <option>Motorină</option>
+                        <option>Electric</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="engine-size">Capacitate motor</label>
+                    <input type="text" id="engine-size" placeholder="Ex: 2.0 L">
+                </div>
+                <div class="form-group">
+                    <label for="door">Număr uși</label>
+                    <select id="door">
+                        <option>2</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="vin">VIN</label>
+                    <input type="text" id="vin" placeholder="Introduceți VIN-ul">
+                </div>
+            </div>
+            <button type="submit" class="btn">Publică</button>
+        </form>
+    </div>

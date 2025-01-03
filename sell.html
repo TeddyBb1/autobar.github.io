@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Car</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sell.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-left">
+            <a href="index.html" class="logo">autobar.ro</a>
+        </div>
+        <nav class="header-center">
+            <ul class="nav-links">
+                <li><a href="search.html">Search</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li><a href="#">Inform</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <img src="pictures/save.png" alt="Save" class="icon">
+            <img src="pictures/notification.png" alt="Notification" class="icon">
+            <a href="login.html" class="login-button">Login</a>
+        </div>
+    </header>
+
+   
+
+    <div class="form-container">
+        <form>
+            <h1>Detalii Mașină</h1>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="listing-title">Titlu Anunț</label>
+                    <input type="text" id="listing-title" placeholder="Introduceți titlul">
+                </div>
+                <div class="form-group">
+                    <label for="category">Categorie</label>
+                    <input type="text" id="category" placeholder="Introduceți categoria">
+                </div>
+                <div class="form-group">
+                    <label for="label">Etichetă</label>
+                    <input type="text" id="label" placeholder="Introduceți eticheta">
+                </div>
+                <div class="form-group">
+                    <label for="condition">Stare</label>
+                    <input type="text" id="condition" placeholder="Introduceți starea">
+                </div>
+                <div class="form-group">
+                    <label for="type">Tip</label>
+                    <input type="text" id="type" placeholder="Introduceți tipul">
+                </div>
+                <div class="form-group">
+                    <label for="make">Marcă</label>
+                    <input type="text" id="make" placeholder="Introduceți marca">
+                </div>
+                <div class="form-group">
+                    <label for="model">Model</label>
+                    <input type="text" id="model" placeholder="Introduceți modelul">
+                </div>
+                <div class="form-group">
+                    <label for="year">An</label>
+                    <input type="text" id="year" placeholder="Introduceți anul">
+                </div>
+                <div class="form-group">
+                    <label for="offer-type">Tip ofertă</label>
+                    <input type="text" id="offer-type" placeholder="Introduceți tipul ofertei">
+                </div>
+                <div class="form-group">
+                    <label for="mileage">Kilometraj</label>
+                    <input type="text" id="mileage" placeholder="Ex: 75,000 km">
+                </div>
+                <div class="form-group">
+                    <label for="transmission">Transmisie</label>
+                    <input type="text" id="transmission" placeholder="Introduceți transmisia">
+                </div>
+                <div class="form-group">
+                    <label for="fuel-type">Tip combustibil</label>
+                    <input type="text" id="fuel-type" placeholder="Introduceți tipul combustibilului">
+                </div>
+                <div class="form-group">
+                    <label for="engine-size">Capacitate motor</label>
+                    <input type="text" id="engine-size" placeholder="Ex: 2.0 L">
+                </div>
+                <div class="form-group">
+                    <label for="door">Număr uși</label>
+                    <input type="text" id="door" placeholder="Introduceți numărul de uși">
+                </div>
+                <div class="form-group">
+                    <label for="vin">VIN</label>
+                    <input type="text" id="vin" placeholder="Introduceți VIN-ul">
+                </div>
+            </div>
+            <button type="submit" class="btn">Publică</button>
+        </form>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne trimiterea formularului
+    
+            // Preluarea datelor din formular
+            const listingTitle = document.getElementById('listing-title').value;
+            const category = document.getElementById('category').value;
+            const label = document.getElementById('label').value;
+            const condition = document.getElementById('condition').value;
+            const type = document.getElementById('type').value;
+            const make = document.getElementById('make').value;
+            const model = document.getElementById('model').value;
+            const year = document.getElementById('year').value;
+            const offerType = document.getElementById('offer-type').value;
+            const mileage = document.getElementById('mileage').value;
+            const transmission = document.getElementById('transmission').value;
+            const fuelType = document.getElementById('fuel-type').value;
+            const engineSize = document.getElementById('engine-size').value;
+            const door = document.getElementById('door').value;
+            const vin = document.getElementById('vin').value;
+    
+            // Crearea unui obiect cu datele anunțului
+            const adData = {
+                listingTitle,
+                category,
+                label,
+                condition,
+                type,
+                make,
+                model,
+                year,
+                offerType,
+                mileage,
+                transmission,
+                fuelType,
+                engineSize,
+                door,
+                vin
+            };
+    
+            // Preluarea anunțurilor existente din localStorage
+            let ads = JSON.parse(localStorage.getItem('ads')) || [];
+    
+            // Adăugarea noului anunț la lista de anunțuri
+            ads.push(adData);
+    
+            // Salvarea listei actualizate de anunțuri în localStorage
+            localStorage.setItem('ads', JSON.stringify(ads));
+    
+            // Redirecționare către pagina de căutare
+            window.location.href = 'search.html';
+        });
+    </script>
+    
+    <!-- Footer -->
+    <footer class="search-footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="#">Imprint</a>
+                <a href="#">Careers</a>
+                <a href="#">General Terms and Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Privacy Settings</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-options">
+                <div class="option">
+                    <h4>Language</h4>
+                    <select>
+                        <option>English</option>
+                        <option>Română</option>
+                    </select>
+                </div>
+                <div class="option">
+                    <h4>Appearance</h4>
+                    <select>
+                        <option>Light Mode</option>
+                        <option>Dark Mode</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="sell.js"></script>
+</body>
+</html>

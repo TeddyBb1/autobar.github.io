@@ -1,0 +1,257 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #EEEEEE;
+    font-family: 'DM Sans', sans-serif;
+    color: #000000;
+}
+
+/* Header Styling */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    padding: 0 300px;
+}
+
+/* Left Logo */
+.header-left .logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #050A44;
+    text-decoration: none;
+}
+
+/* Center Navigation */
+.header-center .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.header-center .nav-links li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.header-center .nav-links li a:hover {
+    color: #050A44;
+}
+
+/* Right Icons */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.header-right .icon {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Login Button */
+.login-button {
+    background-color: #050A44;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #3B4F9F;
+    transform: scale(1.1);
+}
+
+/* Footer Styling */
+.search-footer {
+    background-color: #141619;
+    color: #FFFFFF;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    margin-left: 300px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+}
+
+.footer-options {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    margin-left: 300px;
+}
+
+.option h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.option select {
+    width: 150px;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333333;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+/* Progress Bar */
+.progress-container {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    margin: 30px 300px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.progress-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background-color: #E0E0E0;
+    border-radius: 4px;
+    margin: 0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 50%;
+    background-color: #050A44;
+    border-radius: 4px 0 0 4px;
+    transition: width 0.3s ease;
+}
+
+.progress-text h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #050A44;
+    margin: 0;
+}
+
+.progress-text p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333333;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.form-container {
+    margin: 50px auto; /* Centrează vertical și orizontal containerul */
+    width: calc(100% - 600px); /* 300px la stânga și dreapta */
+    max-width: 800px; /* Lățimea maximă a containerului */
+    background: #fff; /* Fundal alb */
+    padding: 20px 30px; /* Spațiu intern */
+    border-radius: 10px; /* Colțuri rotunjite */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Umbră subtilă */
+    box-sizing: border-box; /* Include padding-ul în dimensiuni */
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Două coloane */
+    gap: 20px; /* Spațiu între elemente */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
